@@ -36,8 +36,8 @@ class ParticleCanvas {
                 size: Math.random() * 2 + 0.5,
                 speedX: (Math.random() - 0.5) * 0.3,
                 speedY: (Math.random() - 0.5) * 0.3,
-                opacity: Math.random() * 0.5 + 0.1,
-                hue: Math.random() * 60 + 240, // Purple to blue range
+                opacity: Math.random() * 0.3 + 0.08,
+                hue: Math.random() * 30 + 210, // Steel blue range
             });
         }
     }
@@ -59,7 +59,7 @@ class ParticleCanvas {
             // Draw particle
             this.ctx.beginPath();
             this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            this.ctx.fillStyle = `hsla(${p.hue}, 70%, 70%, ${p.opacity})`;
+            this.ctx.fillStyle = `hsla(${p.hue}, 35%, 55%, ${p.opacity})`;
             this.ctx.fill();
 
             // Draw connections
@@ -73,7 +73,7 @@ class ParticleCanvas {
                     this.ctx.beginPath();
                     this.ctx.moveTo(p.x, p.y);
                     this.ctx.lineTo(p2.x, p2.y);
-                    this.ctx.strokeStyle = `hsla(260, 60%, 60%, ${0.08 * (1 - dist / 150)})`;
+                    this.ctx.strokeStyle = `hsla(215, 30%, 60%, ${0.06 * (1 - dist / 150)})`;
                     this.ctx.lineWidth = 0.5;
                     this.ctx.stroke();
                 }
