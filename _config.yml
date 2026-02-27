@@ -1,0 +1,10 @@
+title: Tech Notes
+description: 個人用技術メモ
+theme: minima
+
+lang: ja
+
+markdown: kramdown
+highlighter: rouge
+
+show_excerpts: true
